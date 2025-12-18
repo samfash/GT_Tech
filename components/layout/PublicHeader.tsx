@@ -35,10 +35,11 @@ const toggleDarkMode = () => {
 };
 
 
+  const AUTH_LOGIN_URL = process.env.NEXT_PUBLIC_Backend_URL as string;
+
   const handleLogin = () => {
-    login();
-    router.push("/dashboard");    // should be replaced with real auth logic (redirection to login page)
-  };
+  window.location.href = AUTH_LOGIN_URL;
+};
 
   const handleLogout = () => {
     logout();
