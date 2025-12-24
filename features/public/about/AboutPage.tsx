@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, Target, Eye, Heart, Shield, Users, Award, ArrowRight } from "lucide-react";
+import aboutHero from "@/public/about-hero.png";
+import teamSarah from "@/public/team-sarah.png";
+import teamMichael from "@/public/team-michael.png";
+import teamEmily from "@/public/team-emily.png";
+import teamDavid from "@/public/team-david.png";
+import Image from "next/image";
+
 const values = [
   {
     icon: Shield,
@@ -24,10 +31,10 @@ const values = [
 ];
 
 const team = [
-  { name: "Sarah Chen", role: "CEO & Co-founder", image: "SC" },
-  { name: "Michael Torres", role: "CTO & Co-founder", image: "MT" },
-  { name: "Emily Rodriguez", role: "Chief Product Officer", image: "ER" },
-  { name: "David Kim", role: "Chief Financial Officer", image: "DK" },
+  { name: "Sarah Chen", role: "CEO & Co-founder", image: teamSarah },
+  { name: "Michael Torres", role: "CTO & Co-founder", image: teamMichael },
+  { name: "Emily Rodriguez", role: "Chief Product Officer", image: teamEmily },
+  { name: "David Kim", role: "Chief Financial Officer", image: teamDavid },
 ];
 
 const AboutPage = () => {
@@ -41,21 +48,33 @@ const AboutPage = () => {
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
         </div>
         
-        <div className="relative container mx-auto px-6 text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-800/50 border border-blue-600/30 text-blue-200 text-sm mb-6">
-            <Sparkles className="w-4 h-4" />
-            Our Story
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-50 mb-6 leading-tight">
-            Building the Future of
-            <span className="block mt-2 bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">
-              Financial Technology
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl text-blue-200 max-w-2xl mx-auto">
-            Founded in 2019, FinFlow has grown from a small startup to a global leader 
-            in financial management solutions, serving over 10,000 businesses worldwide.
-          </p>
+       <div className="relative container mx-auto px-6 py-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-800/50 border border-blue-600/30 text-blue-200 text-sm mb-6 mt-6">
+                <Sparkles className="w-4 h-4" />
+                Our Story
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-50 mb-6 leading-tight">
+                Building the Future of
+                <span className="block mt-2 bg-linear-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">
+                  Financial Technology
+                </span>
+              </h1>
+              <p className="text-lg md:text-xl text-blue-200 max-w-2xl">
+                Founded in 2019, GT Tech has grown from a small startup to a global leader 
+                in financial management solutions, serving over 10,000 businesses worldwide.
+              </p>
+            </div>
+            <div className="relative">
+              <Image
+                src={aboutHero} 
+                alt="Global fintech network visualization" 
+                className="w-full rounded-2xl shadow-2xl shadow-blue-500/20"
+              />
+              <div className="absolute inset-0 rounded-2xl bg-linear-to-t from-blue-950/50 to-transparent" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -154,8 +173,12 @@ const AboutPage = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <div key={index} className="text-center group">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-3xl font-bold text-blue-50 group-hover:scale-105 transition-transform duration-300">
-                  {member.image}
+                <div className="w-32 h-32 mx-auto mb-4 rounded-2xl overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-lg font-semibold text-blue-50">{member.name}</h3>
                 <p className="text-blue-300 text-sm">{member.role}</p>

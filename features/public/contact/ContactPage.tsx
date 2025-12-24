@@ -2,27 +2,27 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Link from "next/link";
-import { Mail, Phone, MapPin, Clock, Send, ArrowLeft } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send} from "lucide-react";
 
 const ContactPage = () => {
   const contactInfo = [
     {
       icon: Mail,
       title: "Email Us",
-      detail: "hello@fintech.com",
+      detail: "hello@gttechnology.com",
       description: "We'll respond within 24 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
-      detail: "+1 (555) 123-4567",
+      detail: "+234 (081) 3553-7494",
       description: "Mon-Fri from 8am to 6pm"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      detail: "123 Finance Street",
-      description: "New York, NY 10001"
+      detail: "18 Ajibulu Street",
+      description: "Lagos, LG 12004"
     },
     {
       icon: Clock,
