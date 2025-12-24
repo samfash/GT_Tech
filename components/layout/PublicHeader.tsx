@@ -50,9 +50,9 @@ const toggleDarkMode = () => {
         <div className="container mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <div className="rounded flex items-center justify-center">
-              <Image src={logo} alt="GT Technology Logo" width={95} height={90} className="object-contain" priority />
+              <Image src={logo} alt="GT Technology Logo" width={95} height={90} className="object-contain -ml-4" priority />
             </div>
-            <span className="text-xl text-brand-soft -ml-5">Technology</span>
+            <span className="text-xl text-brand-soft -ml-4">Technology</span>
           </Link>
 
           <nav className="absolute left-1/2 transform -translate-x-1/2">
