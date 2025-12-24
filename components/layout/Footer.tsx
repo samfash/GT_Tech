@@ -1,4 +1,7 @@
 import { Sparkles, Linkedin, Twitter, Github } from "lucide-react";
+import Link from "next/link";
+import logo from "@/public/gt_logo.png";
+import Image from "next/image";
 
 const footerLinks = {
   Product: ["Features", "Pricing", "Security", "Integrations", "API"],
@@ -14,12 +17,12 @@ const PublicFooter = () => {
         <div className="grid lg:grid-cols-6 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-blue-500 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-blue-50" />
-              </div>
-              <span className="text-xl font-bold text-blue-50">GT Tech</span>
+            <Link href="/" className="flex items-center">
+            <div className="rounded flex items-center justify-center">
+              <Image src={logo} alt="GT Technology Logo" width={95} height={90} className="object-contain -ml-5" priority />
             </div>
+            <span className="text-xl text-brand-soft -ml-5">Technology</span>
+          </Link>
             <p className="text-blue-300 mb-6 max-w-sm">
               Empowering businesses with intelligent financial tools. Simplify payments, 
               gain insights, and grow globally.

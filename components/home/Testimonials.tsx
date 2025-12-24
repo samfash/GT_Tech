@@ -1,23 +1,30 @@
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
+import testimonial1 from "@/public/testimonial-1.png";
+import testimonial2 from "@/public/testimonial-2.png";
+import testimonial3 from "@/public/testimonial-3.png";
 
 const testimonials = [
   {
-    quote: "FinFlow transformed how we handle international payments. What used to take days now happens in seconds.",
+    quote: "GT Tech transformed how we handle international payments. What used to take days now happens in seconds.",
     author: "Sarah Chen",
     role: "CFO at TechStart",
     rating: 5,
+     image: testimonial1,
   },
   {
     quote: "The analytics dashboard alone has saved us countless hours. We finally have visibility into our cash flow.",
     author: "Marcus Johnson",
     role: "Finance Director at GrowthCo",
     rating: 5,
+     image: testimonial2,
   },
   {
-    quote: "Best decision we made was switching to FinFlow. The compliance tools are incredibly robust.",
+    quote: "Best decision we made was switching to GT Tech. The compliance tools are incredibly robust.",
     author: "Elena Rodriguez",
     role: "CEO at GlobalTrade",
     rating: 5,
+    image: testimonial3,
   },
 ];
 
@@ -29,7 +36,7 @@ const Testimonials = () => {
           <span className="text-primary font-medium mb-4 block">TESTIMONIALS</span>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Loved by Businesses
-            <span className="gradient-text block">Around the World</span>
+            <span className="text-primary block">Around the World</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             See what our customers have to say about their experience with FinFlow.
@@ -53,11 +60,11 @@ const Testimonials = () => {
               <p className="text-foreground mb-6 leading-relaxed">&quot;{testimonial.quote}&quot;</p>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                  <span className="text-primary font-semibold text-lg">
-                    {testimonial.author.charAt(0)}
-                  </span>
-                </div>
+                <Image 
+                  src={testimonial.image} 
+                  alt={testimonial.author}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
                   <div className="font-semibold text-foreground">{testimonial.author}</div>
                   <div className="text-sm text-muted-foreground">{testimonial.role}</div>

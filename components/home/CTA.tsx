@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import ctaIllustration from "@/public/cta-illustration.png";
+import Image from "next/image";
+
 
 const benefits = [
   "14-day free trial, no credit card required",
@@ -17,7 +20,8 @@ const CTA = () => {
       </div>
 
       <div className="relative container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-[1fr_200px] gap-8 items-center">
+        <div className="text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-bold text-blue-300 mb-6">
             Ready to Transform Your
             <span className="block mt-2 bg-linear-to-r from-blue-300 to-blue-400 bg-clip-text text-transparent">
@@ -39,7 +43,7 @@ const CTA = () => {
             </Button>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-6">
             {benefits.map((benefit) => (
               <div key={benefit} className="flex items-center gap-2 text-blue-300">
                 <CheckCircle className="w-5 h-5 text-blue-400" />
@@ -47,6 +51,15 @@ const CTA = () => {
               </div>
             ))}
           </div>
+           </div>
+        
+        <div className="hidden md:block">
+          <Image
+            src={ctaIllustration} 
+            alt="Launch illustration" 
+            className="w-full max-w-50"
+          />
+        </div>
         </div>
       </div>
     </section>

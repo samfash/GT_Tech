@@ -1,4 +1,6 @@
 import { XCircle, CheckCircle } from "lucide-react";
+import problemsTransform from "@/public/problems-transform.png";
+import Image from "next/image";
 
 const problems = [
   {
@@ -28,11 +30,19 @@ const Problems = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             We Solve Your Biggest
 
-            <span className="gradient-text block">Financial Challenges</span>
+            <span className="text-primary block">Financial Challenges</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Say goodbye to outdated processes and hello to streamlined financial operations.
           </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto mb-12">
+          <Image
+            src={problemsTransform} 
+            alt="Before and after transformation with FinFlow" 
+            className="w-full rounded-2xl shadow-soft"
+          />
         </div>
 
         <div className="max-w-4xl mx-auto">

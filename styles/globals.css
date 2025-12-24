@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@config "../tailwind.config.js";
 @import "tailwindcss";
 
 
@@ -7,24 +8,7 @@
 *::after {
   box-sizing: border-box;
 }
-:root {
-  --background: #ffffff;
-  --foreground: #0e5ec8;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0e5ec8;
-    --foreground: #ededed;
-  }
-}
 
 html,
 body {
@@ -32,22 +16,156 @@ body {
   margin: 0;
 }
 
+:root {
+  /* ===== Core theme ===== */
+  --background: #ffffff;        /* very light blue-gray */
+  --foreground: #0f172a;        /* slate-900 */
 
-body {
-  
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.5;
-  color: #111;
-  background-color: #fff;
-  transition: background-color 0.3s, color 0.3s;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
+
+  /* ===== Brand (Blue system) ===== */
+  --brand: #2563eb;             /* blue-600 */
+  --brand-strong: #00165f;      /* blue-700 */
+  --brand-soft: #60a5fa;        /* blue-400 */
+  --brand-muted: #fafcff;       /* blue-100 */
+  --brand-glow: rgba(0, 72, 255, 0.35);
+
+  /* ===== Semantic roles ===== */
+  --primary: var(--brand);
+  --primary-foreground: #19191a;
+
+  --secondary: #eff6ff;
+  --secondary-foreground: #1e3a8a;
+
+  --accent: #e0edff;
+  --accent-foreground: #1d4ed8;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  /* ===== Gradients ===== */
+  --gradient-hero: linear-gradient(
+    135deg,
+    #010f1a 0%,
+    #038fe7 50%,
+    #002a3c 100%
+  );
+
+  --gradient-card: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f1f5f9 100%
+  );
+
+  --gradient-cta: linear-gradient(
+    135deg,
+    #2563eb 0%,
+    #1d4ed8 100%
+  );
+
+  /* ===== Shadows ===== */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 10px 15px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 0 40px var(--brand-glow);
+
+  --radius: 0.75rem;
 }
 
-html.dark body {
-  background-color: #111;
-  color: #fff;
+/* ===== Dark mode ===== */
+html.dark {
+  --background: #020617;        /* slate-950 */
+  --foreground: #e5e7eb;        /* gray-200 */
+
+  --card: #020617;
+  --card-foreground: #e5e7eb;
+
+  --popover: #020617;
+  --popover-foreground: #e5e7eb;
+
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #60a5fa;
+
+  /* Brand blues tuned for dark */
+  --brand: #60a5fa;             /* blue-400 */
+  --brand-strong: #ecf3ff;      /* blue-500 */
+  --brand-soft: #f2f8ff;        /* blue-300 */
+  --brand-muted: rgba(219, 230, 243, 0.15);
+  --brand-glow: rgba(202, 218, 239, 0.4);
+
+--secondary: #020617;
+  --secondary-foreground: #c7d2fe;
+
+  --accent: #020617;
+  --accent-foreground: #93c5fd;
+
+  --muted: #020617;
+  --muted-foreground: #94a3b8;
+
+  --destructive: #991b1b;
+  --destructive-foreground: #fee2e2;
+
+   --gradient-hero: linear-gradient(
+    135deg,
+    #010204 0%,
+    #032d53 50%,
+    #024576 100%
+  );
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--blue-400)) 0%, hsl(var(--blue-600)) 100%);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {

@@ -6,6 +6,8 @@ import { useAuthStore } from "@/store/useAuthStore";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sparkles, Moon, Sun, Menu, XIcon} from "lucide-react";
+import logo from "@/public/gt_logo.png";
+import Image from "next/image"; 
 
 
 export function PublicHeader() {
@@ -19,12 +21,9 @@ export function PublicHeader() {
   return localStorage.getItem("darkMode") === "true";
 });
 
-  useEffect(() => {
-  if (typeof window === "undefined") return;
-  const html = document.documentElement;
-  if (darkMode) html.classList.add("dark");
-  else html.classList.remove("dark");
-}, [darkMode]); 
+useEffect(() => {
+  document.documentElement.classList.toggle("dark", darkMode);
+}, [darkMode]);
 
 const toggleDarkMode = () => {
   const newMode = !darkMode;
@@ -47,20 +46,20 @@ const toggleDarkMode = () => {
   };
 
   return (
-    <nav className="py-6 px-6 border-blue-800/30 fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="py-6 px-6 border-foreground/10 fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b">
         <div className="container mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-xl bg-blue-500 flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-blue-50" />
+          <Link href="/" className="flex items-center">
+            <div className="rounded flex items-center justify-center">
+              <Image src={logo} alt="GT Technology Logo" width={95} height={90} className="object-contain" priority />
             </div>
-            <span className="text-xl font-bold text-blue-500">GT Technology</span>
+            <span className="text-xl text-brand-soft -ml-5">Technology</span>
           </Link>
 
           <nav className="absolute left-1/2 transform -translate-x-1/2">
           <div className="hidden md:flex items-center gap-8">
-            {!isLoggedIn && <Link href="/" className="text-blue-200 hover:text-blue-50 transition-colors">Home</Link>}
-            {!isLoggedIn && <Link href="/about" className="text-blue-50 font-medium">About</Link>}
-            {!isLoggedIn && <Link href="/contact" className="text-blue-200 hover:text-blue-50 transition-colors">Contact</Link>}
+            {!isLoggedIn && <Link href="/" className="font-medium underline transition-colors">Home</Link>}
+            {!isLoggedIn && <Link href="/about" className="font-medium">About</Link>}
+            {!isLoggedIn && <Link href="/contact" className="font-medium transition-colors">Contact</Link>}
               
             {isLoggedIn && <Link href="/dashboard" className="text-blue-200 hover:text-blue-50 transition-colors">Dashboard</Link>} 
           </div>
@@ -78,6 +77,7 @@ const toggleDarkMode = () => {
   )}
 </div>
 
+
 <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="md:hidden">
   {isOpen ? <XIcon className="h-5 w-5" /> : <Menu size={20} />}
 </Button>
@@ -86,12 +86,12 @@ const toggleDarkMode = () => {
        <div>
          {isOpen && (
            <div
-             className="absolute top-full left-0 w-full bg-background dark:bg-background rounded-b-2xl border-t border-background dark:border-background mt-2 shadow-md md:hidden"
+             className="absolute top-full left-0 w-full bg-background rounded-b-2xl border-t border-background dark:border-background mt-2 shadow-md md:hidden"
            >
              <div className="flex flex-col items-center py-4">
-               {!isLoggedIn && <Link  onClick={() => setIsOpen(false)} href="/" className="text-blue-200 hover:text-blue-50 transition-colors">Home</Link>}
-            {!isLoggedIn && <Link onClick={() => setIsOpen(false)} href="/about" className="text-blue-50 font-medium">About</Link>}
-            {!isLoggedIn && <Link onClick={() => setIsOpen(false)} href="/contact" className="text-blue-200 hover:text-blue-50 transition-colors">Contact</Link>}
+               {!isLoggedIn && <Link  onClick={() => setIsOpen(false)} href="/" className=" hover:bg-brand transition-colors">Home</Link>}
+            {!isLoggedIn && <Link onClick={() => setIsOpen(false)} href="/about" className="hover:bg-brand font-medium">About</Link>}
+            {!isLoggedIn && <Link onClick={() => setIsOpen(false)} href="/contact" className="hover:bg-brand transition-colors">Contact</Link>}
               
             {isLoggedIn && <Link href="/dashboard" className="text-blue-200 hover:text-blue-50 transition-colors">Dashboard</Link>} 
               </div>       

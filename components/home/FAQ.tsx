@@ -4,6 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import faqIllustration from "@/public/faq-illustration.png";
+import Image from "next/image";
 
 const faqs = [
   {
@@ -47,7 +49,7 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_300px] gap-12 items-start">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
@@ -64,6 +66,13 @@ const FAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
+          <div className="hidden md:block">
+            <Image
+              src={faqIllustration} 
+              alt="FAQ illustration" 
+              className="w-full rounded-2xl"
+            />
+          </div>
         </div>
       </div>
     </section>
