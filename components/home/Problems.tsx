@@ -4,20 +4,20 @@ import Image from "next/image";
 
 const problems = [
   {
-    problem: "Manual reconciliation takes hours",
-    solution: "Automated matching in seconds",
+    problem: "Complex financial statement preparation",
+    solution: "Automated report generation",
   },
   {
-    problem: "Limited visibility into cash flow",
-    solution: "Real-time dashboard analytics",
+    problem: "Limited visibility into assets & liabilities",
+    solution: "Real-time balance tracking",
   },
   {
-    problem: "High international transfer fees",
-    solution: "Transparent, low-cost transfers",
+    problem: "Expensive tax consultants for compliance",
+    solution: "Built-in VAT & CIT management",
   },
   {
-    problem: "Complex compliance requirements",
-    solution: "Built-in regulatory tools",
+    problem: "Difficult external auditor communication",
+    solution: "Direct audit integration tools",
   },
 ];
 
@@ -30,10 +30,10 @@ const Problems = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             We Solve Your Biggest
 
-            <span className="text-primary block">Financial Challenges</span>
+            <span className="gradient-text block">Reporting Challenges</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Say goodbye to outdated processes and hello to streamlined financial operations.
+            Say goodbye to complex spreadsheets and hello to professional financial reporting.
           </p>
         </div>
 

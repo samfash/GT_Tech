@@ -1,15 +1,15 @@
 import ContactPage from "@/features/public/contact/ContactPage";
 
 export const metadata = {
-  title: "Contact Us – Global takers Technology",
-  description: "Get in touch with Global takers Technology.",
+  title: "Contact Us – Global takers Finance",
+  description: "Get in touch with Global takers Finance.",
   keywords: ["contact", "company", "services"],
-  authors: [{ name: "Global takers Technology Team" }],
+  authors: [{ name: "Global takers Finance Team" }],
   openGraph: {
-    title: "Contact Us – Global takers Technology",
-    description: "Get in touch with Global takers Technology.",
+    title: "Contact Us – Global takers Finance",
+    description: "Get in touch with Global takers Finance.",
     url: "http://localhost:3000/contact",
-    siteName: "Global takers Technology",
+    siteName: "Global takers Finance",
     images: [
       {
         url: "http://localhost:3000/og-image.png",

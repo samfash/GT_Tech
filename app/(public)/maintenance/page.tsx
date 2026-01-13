@@ -1,15 +1,15 @@
 import MaintenancePage from "@/features/public/maintenance/maintenacePage";
 
 export const metadata = {
-  title: "Maintenance – Global takers Technology",
+  title: "Maintenance – Global takers Finance",
   description: "Our site is currently under maintenance. We'll be back soon.",
   keywords: ["about", "company", "services"],
-  authors: [{ name: "Global takers Technology Team" }],
+  authors: [{ name: "Global takers Finance Team" }],
   openGraph: {
-    title: "Maintenance – Global takers Technology",
+    title: "Maintenance – Global takers Finance",
     description: "Our site is currently under maintenance. We'll be back soon.",
     url: "http://localhost:3000/maintenance",
-    siteName: "Global takers Technology",
+    siteName: "Global takers Finance",
     images: [
       {
         url: "http://localhost:3000/og-image.png",

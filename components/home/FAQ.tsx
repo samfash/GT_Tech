@@ -9,28 +9,28 @@ import Image from "next/image";
 
 const faqs = [
   {
-    question: "How quickly can I get started with GT Tech?",
-    answer: "You can get started in under 5 minutes. Simply sign up, verify your business, and you'll have access to all features immediately. Our onboarding team is available 24/7 to help you through the process.",
+    question: "What financial statements can GT Finance generate?",
+    answer: "GT Finance generates comprehensive financial statements including income statements, cash flow statements, and statements of financial position. We also provide cash book presentations, sales and purchase ledgers, and receipts and payments ledgers.",
   },
   {
-    question: "What currencies and countries do you support?",
-    answer: "We support 50+ currencies and operate in 150+ countries. This includes all major currencies like USD, EUR, GBP, as well as emerging market currencies. We're constantly expanding our coverage.",
+    question: "How does GT Finance help with tax compliance?",
+    answer: "GT Finance helps organizations manage their tax positions for VAT and CIT, ensuring compliance and avoiding tax liabilities. This can save significant costs associated with hiring external tax consultants.",
   },
   {
-    question: "How secure is GT Tech?",
-    answer: "We use bank-grade 256-bit encryption, multi-factor authentication, and are SOC 2 Type II certified. Your funds are held in segregated accounts with tier-1 banking partners. We also have a dedicated security team monitoring for threats 24/7.",
+    question: "What financial data can I track in real-time?",
+    answer: "You can track revenue for any period, company expenditures, current assets like receivables and cash/bank balances, and current liabilities like payables. All data is updated in real-time for accurate reporting.",
   },
   {
-    question: "What are your fees for international transfers?",
-    answer: "We offer transparent, low-cost transfers starting at 0.5% for most corridors. There are no hidden fees - you'll always see the total cost upfront before confirming any transaction.",
+    question: "How does the audit feature work?",
+    answer: "GT Finance includes a built-in audit feature for security monitoring and compliance. It enables direct communication with external auditors, streamlining the audit process and ensuring transparency.",
   },
   {
-    question: "Can I integrate GT Tech with my existing tools?",
-    answer: "Yes! We offer integrations with popular accounting software like QuickBooks, Xero, and NetSuite, as well as ERP systems and custom API access for enterprise clients.",
+    question: "Can GT Finance replace my tax consultant?",
+    answer: "For basic tax matters like VAT and CIT, GT Finance can help you manage compliance independently. However, for complex tax situations, we recommend consulting with a professional while using our tools for documentation.",
   },
   {
-    question: "What kind of support do you offer?",
-    answer: "We provide 24/7 support via chat, email, and phone. Enterprise clients also get a dedicated account manager. Our average response time is under 2 minutes for chat support.",
+    question: "What ledgers and books are included?",
+    answer: "GT Finance provides comprehensive cash book presentations, sales ledgers, purchase ledgers, receipts ledgers, and payments ledgers. All are integrated with your financial statements for seamless reporting.",
   },
 ];
 

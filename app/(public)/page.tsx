@@ -2,15 +2,15 @@ import HomePage from "@/features/public/home/HomePage";
 
 
 export const metadata = {
-  title: "Home - – Global takers Technology",
-  description: "Welcome to Global takers Technology and what we do.",
+  title: "Home - – Global takers Finance",
+  description: "Welcome to Global takers Finance and what we do.",
   keywords: ["about", "company", "services"],
   authors: [{ name: "Global takers Technology Team" }],
   openGraph: {
-    title: "Home - Global takers Technology",
-    description: "Welcome to Global takers Technology and what we do.",
+    title: "Home - Global takers Finance",
+    description: "Welcome to Global takers Finance and what we do.",
     url: "http://localhost:3000",
-    siteName: "Global takers Technology",
+    siteName: "Global takers Finance",
     images: [
       {
         url: "http://localhost:3000/og-image.png",

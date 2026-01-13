@@ -10,38 +10,34 @@ import Image from "next/image";
 const features = [
   {
     image: featureInstant,
-    title: "Instant Transfers",
-    description: "Send and receive money globally in seconds with our lightning-fast payment infrastructure.",
+    title: "Financial Statements",
+    description: "Generate income statements, cash flow statements, and statements of financial position with ease.",
   },
   {
-    // icon: Shield,
     image: featureSecurity,
-    title: "Bank-Grade Security",
-    description: "Your data is protected with 256-bit encryption and multi-factor authentication.",
+    title: "Audit & Security",
+    description: "Built-in audit feature for security monitoring and compliance with direct auditor communication.",
   },
   {
-    // icon: Globe,
-     image: featureGlobal,
-    title: "Global Coverage",
-    description: "Operate in 150+ countries with support for 50+ currencies and local payment methods.",
+    image: featureGlobal,
+    title: "Ledger Management",
+    description: "Manage sales & purchase ledgers, receipts & payments ledgers, and cash book presentations.",
   },
   {
-    // icon: LineChart,
     image: featureAnalytics,
-    title: "Real-Time Analytics",
-    description: "Get instant insights into your cash flow, spending patterns, and financial health.",
+    title: "Revenue & Expenditure",
+    description: "Track revenue, company expenditures, receivables, payables, and cash/bank balances in real-time.",
   },
   {
-    // icon: CreditCard,
     image: featureCards,
-    title: "Smart Cards",
-    description: "Issue virtual and physical cards with customizable spending limits and controls.",
+    title: "Tax Management",
+    description: "Manage VAT and CIT positions to ensure compliance and avoid tax liabilities, saving consultant costs.",
   },
   {
     // icon: Lock,
     image: featureCompliance,
     title: "Compliance Built-In",
-    description: "Stay compliant with automated KYC, AML, and regulatory reporting tools.",
+    description: "Stay compliant with automated tax reporting and regulatory requirements built into every report.",
   },
 ];
 
@@ -52,11 +48,11 @@ const Features = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="font-medium mb-4 block">FEATURES</span>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Everything You Need to
-            <span className=" text-primary block">Manage Your Finances</span>
+             Complete Financial
+            <span className="gradient-text block">Reporting Suite</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Powerful tools designed to simplify complex financial operations and help your business grow.
+            Present essential financial statements, manage tax positions, and ensure compliance with powerful built-in tools.
           </p>
         </div>
 

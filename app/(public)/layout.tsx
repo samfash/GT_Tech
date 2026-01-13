@@ -4,15 +4,15 @@ import MaintenancePage from "./maintenance/page";
 
 
 export const metadata = {
-  title: " – Global takers Technology",
-  description: "Global takers Technology default description.",
+  title: " – Global takers Finance",
+  description: "Global takers Finance default description.",
   keywords: ["about", "company", "services"],
-  authors: [{ name: "Global takers Technology Team" }],
+  authors: [{ name: "Global takers Finance Team" }],
   openGraph: {
-    title: " – Global takers Technology",
-    description: "Global takers Technology default description.",
+    title: " – Global takers Finance",
+    description: "Global takers Finance default description.",
     url: "http://localhost:3000/about",
-    siteName: "Global takers Technology",
+    siteName: "Global takers Finance",
     images: [
       {
         url: "http://localhost:3000/og-image.png",

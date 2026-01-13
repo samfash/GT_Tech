@@ -4,15 +4,15 @@ import AboutPage from "@/features/public/about/AboutPage";
 
 
 export const metadata = {
-  title: "About Us – Global takers Technology",
-  description: "Learn more about Global takers Technology and what we do.",
+  title: "About Us – Global takers Finance",
+  description: "Learn more about Global takers Finance and what we do.",
   keywords: ["about", "company", "services"],
-  authors: [{ name: "Global takers Technology Team" }],
+  authors: [{ name: "Global takers Finance Team" }],
   openGraph: {
-    title: "About Us – Global takers Technology",
-    description: "Learn more about Global takers Technology and what we do.",
+    title: "About Us – Global takers Finance",
+    description: "Learn more about Global takers Finance and what we do.",
     url: "http://localhost:3000/about",
-    siteName: "Global takers Technology",
+    siteName: "Global takers Finance",
     images: [
       {
         url: "http://localhost:3000/og-image.png",

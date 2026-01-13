@@ -21,7 +21,7 @@ const PublicFooter = () => {
             <div className="rounded flex items-center justify-center">
               <Image src={logo} alt="GT Technology Logo" width={95} height={90} className="object-contain -ml-5" priority />
             </div>
-            <span className="text-xl text-brand-soft -ml-5">Technology</span>
+            <span className="text-xl text-brand-soft -ml-5">Finance</span>
           </Link>
             <p className="text-blue-300 mb-6 max-w-sm">
               Empowering businesses with intelligent financial tools. Simplify payments, 
