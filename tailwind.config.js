@@ -2,66 +2,210 @@
 /** @type {import('tailwindcss').Config} */
 
 
+// module.exports = {
+//   darkMode: "class",
+//   content: [
+//     "./app/**/*.{ts,tsx}",
+//     "./components/**/*.{ts,tsx}",
+//   ],
+//   theme: {
+//     extend: {
+//       colors: {
+//         background: "var(--background)",
+//         foreground: "var(--foreground)",
+
+//         card: "var(--card)",
+//         "card-foreground": "var(--card-foreground)",
+
+//         popover: "var(--popover)",
+//         "popover-foreground": "var(--popover-foreground)",
+
+//         border: "var(--border)",
+//         input: "var(--input)",
+//         ring: "var(--ring)",
+
+//         primary: "var(--primary)",
+//         "primary-foreground": "var(--primary-foreground)",
+
+//         secondary: "var(--secondary)",
+//         "secondary-foreground": "var(--secondary-foreground)",
+
+//         accent: "var(--accent)",
+//         "accent-foreground": "var(--accent-foreground)",
+
+//         muted: "var(--muted)",
+//         "muted-foreground": "var(--muted-foreground)",
+
+//         destructive: "var(--destructive)",
+//         "destructive-foreground": "var(--destructive-foreground)",
+
+//         /* Brand system */
+//         brand: "var(--brand)",
+//         "brand-strong": "var(--brand-strong)",
+//         "brand-soft": "var(--brand-soft)",
+//         "brand-muted": "var(--brand-muted)",
+//       },
+//       borderRadius: {
+//         lg: "var(--radius)",
+//       },
+//       boxShadow: {
+//         sm: "var(--shadow-sm)",
+//         md: "var(--shadow-md)",
+//         lg: "var(--shadow-lg)",
+//         glow: "var(--shadow-glow)",
+//       },
+//       backgroundImage: {
+//         "gradient-hero": "var(--gradient-hero)",
+//         "gradient-card": "var(--gradient-card)",
+//         "gradient-cta": "var(--gradient-cta)",
+//       },
+//     },
+//   },
+//   plugins: [],
+// };
+
+import tailwindcssAnimate from "tailwindcss-animate";
+
 module.exports = {
-  darkMode: "class",
-  content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-  ],
+  darkMode: ["class"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-
-        card: "var(--card)",
-        "card-foreground": "var(--card-foreground)",
-
-        popover: "var(--popover)",
-        "popover-foreground": "var(--popover-foreground)",
-
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
-
-        primary: "var(--primary)",
-        "primary-foreground": "var(--primary-foreground)",
-
-        secondary: "var(--secondary)",
-        "secondary-foreground": "var(--secondary-foreground)",
-
-        accent: "var(--accent)",
-        "accent-foreground": "var(--accent-foreground)",
-
-        muted: "var(--muted)",
-        "muted-foreground": "var(--muted-foreground)",
-
-        destructive: "var(--destructive)",
-        "destructive-foreground": "var(--destructive-foreground)",
-
-        /* Brand system */
-        brand: "var(--brand)",
-        "brand-strong": "var(--brand-strong)",
-        "brand-soft": "var(--brand-soft)",
-        "brand-muted": "var(--brand-muted)",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
+        gt: {
+          blue: "hsl(var(--gt-blue))",
+          "blue-light": "hsl(var(--gt-blue-light))",
+          cyan: "hsl(var(--gt-cyan))",
+          "cyan-light": "hsl(var(--gt-cyan-light))",
+          sky: "hsl(var(--gt-sky))",
+          navy: "hsl(var(--gt-navy))",
+          slate: "hsl(var(--gt-slate))",
+          gray: "hsl(var(--gt-gray))",
+          light: "hsl(var(--gt-light))",
+          success: "hsl(var(--gt-success))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+        "2xl": "1rem",
+        "3xl": "1.5rem",
+        "4xl": "2rem",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "slide-in-left": {
+          "0%": { opacity: "0", transform: "translateX(-50px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "slide-in-right": {
+          "0%": { opacity: "0", transform: "translateX(50px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "scale-in": {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        pulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out",
+        "fade-in": "fade-in 0.5s ease-out",
+        "slide-in-left": "slide-in-left 0.6s ease-out",
+        "slide-in-right": "slide-in-right 0.6s ease-out",
+        "scale-in": "scale-in 0.5s ease-out",
+        float: "float 3s ease-in-out infinite",
+        pulse: "pulse 2s ease-in-out infinite",
       },
       boxShadow: {
-        sm: "var(--shadow-sm)",
-        md: "var(--shadow-md)",
-        lg: "var(--shadow-lg)",
-        glow: "var(--shadow-glow)",
-      },
-      backgroundImage: {
-        "gradient-hero": "var(--gradient-hero)",
-        "gradient-card": "var(--gradient-card)",
-        "gradient-cta": "var(--gradient-cta)",
+        "gt-sm": "var(--shadow-sm)",
+        "gt-md": "var(--shadow-md)",
+        "gt-lg": "var(--shadow-lg)",
+        "gt-xl": "var(--shadow-xl)",
+        "gt-card": "var(--shadow-card)",
+        "gt-card-hover": "var(--shadow-card-hover)",
       },
     },
   },
-  plugins: [],
+  plugins: [tailwindcssAnimate],
 };
-
-// export default config;

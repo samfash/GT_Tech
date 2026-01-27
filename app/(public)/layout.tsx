@@ -1,5 +1,5 @@
-import { PublicHeader } from "@/components/layout/PublicHeader";
-import  PublicFooter  from "@/components/layout/Footer";
+import  PublicHeader from "@/components/layout/PublicHeader_v2";
+import  PublicFooter  from "@/components/layout/Footer_v2";
 import MaintenancePage from "./maintenance/page";
 
 

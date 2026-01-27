@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+/* GT Finance Design System - Professional Fintech Aesthetic */
+
+@layer base {
+  :root {
+    /* Core brand colors */
+    --background: 210 33% 99%;
+    --foreground: 217 71% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 217 71% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 71% 20%;
+
+    /* Royal blue for trust and professionalism */
+    --primary: 217 71% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light slate for secondary elements */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 217 71% 20%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Cyan accent for vibrancy */
+    --accent: 195 85% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 195 85% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom GT Finance tokens - Updated to match logo */
+    --gt-blue: 217 71% 35%;
+    --gt-blue-light: 217 65% 45%;
+    --gt-cyan: 195 85% 50%;
+    --gt-cyan-light: 195 75% 60%;
+    --gt-sky: 197 85% 55%;
+    --gt-navy: 217 71% 25%;
+    --gt-slate: 215 25% 27%;
+    --gt-gray: 215 20% 65%;
+    --gt-light: 210 33% 98%;
+    --gt-gradient-start: 210 100% 97%;
+    --gt-gradient-end: 195 40% 95%;
+    --gt-success: 142 69% 45%;
+    --gt-light: 210 33% 98%;
+    --gt-gradient-start: 210 100% 97%;
+    --gt-gradient-end: 173 30% 95%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(222 47% 11% / 0.08), 0 2px 4px -2px hsl(222 47% 11% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(222 47% 11% / 0.08), 0 4px 6px -4px hsl(222 47% 11% / 0.06);
+    --shadow-xl: 0 20px 25px -5px hsl(222 47% 11% / 0.08), 0 8px 10px -6px hsl(222 47% 11% / 0.06);
+    --shadow-card: 0 0 0 1px hsl(214 32% 91%), 0 4px 20px -2px hsl(222 47% 11% / 0.08);
+    --shadow-card-hover: 0 0 0 1px hsl(173 58% 39% / 0.3), 0 8px 30px -4px hsl(222 47% 11% / 0.12);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 173 58% 39%;
+  }
+
+  html.dark {
+      /* Deep navy background matching reference */
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
+    
+    /* Card with slightly lighter navy */
+    --card: 222 47% 10%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 10%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* Cyan primary for dark mode */
+    --primary: 195 85% 50%;
+    --primary-foreground: 222 47% 7%;
+    
+    --secondary: 222 40% 14%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 222 40% 14%;
+    --muted-foreground: 215 25% 60%;
+    
+    /* Bright cyan accent */
+    --accent: 195 85% 50%;
+    --accent-foreground: 222 47% 7%;
+    
+    --destructive: 0 63% 45%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Subtle borders */
+    --border: 217 40% 20%;
+    --input: 217 40% 20%;
+    --ring: 195 85% 50%;
+    
+    /* Dark mode GT tokens */
+    --gt-blue: 217 71% 50%;
+    --gt-blue-light: 217 65% 60%;
+    --gt-cyan: 195 85% 55%;
+    --gt-cyan-light: 195 75% 65%;
+    --gt-sky: 197 85% 60%;
+    --gt-navy: 222 47% 10%;
+    --gt-slate: 215 25% 50%;
+    --gt-gray: 215 20% 55%;
+    --gt-light: 222 47% 15%;
+    --gt-gradient-start: 222 47% 7%;
+    --gt-gradient-end: 222 47% 10%;
+    --gt-success: 142 69% 50%;
+    
+    /* Dark shadows with cyan glow */
+    --shadow-sm: 0 1px 2px 0 hsl(222 47% 3% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(222 47% 3% / 0.4), 0 2px 4px -2px hsl(222 47% 3% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(222 47% 3% / 0.4), 0 4px 6px -4px hsl(222 47% 3% / 0.3);
+    --shadow-xl: 0 20px 25px -5px hsl(222 47% 3% / 0.4), 0 8px 10px -6px hsl(222 47% 3% / 0.3);
+    --shadow-card: 0 0 0 1px hsl(217 40% 20%), 0 4px 20px -2px hsl(222 47% 3% / 0.5);
+    --shadow-card-hover: 0 0 0 1px hsl(195 85% 50% / 0.4), 0 8px 30px -4px hsl(195 85% 50% / 0.15);
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 195 85% 50%;
+    --sidebar-primary-foreground: 222 47% 7%;
+    --sidebar-accent: 222 40% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 40% 20%;
+    --sidebar-ring: 195 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Gradient backgrounds */
+  .gt-gradient-bg {
+    background: linear-gradient(135deg, hsl(var(--gt-gradient-start)) 0%, hsl(var(--gt-gradient-end)) 100%);
+  }
+
+  .gt-gradient-hero {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(210 40% 97%) 50%, hsl(195 30% 96%) 100%);
+  }
+
+  .gt-gradient-radial {
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(195 85% 50% / 0.15), transparent);
+  }
+
+  /* Card styles */
+  .gt-card {
+    @apply rounded-2xl bg-card;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gt-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+
+  /* Feature card expand on hover */
+  .gt-feature-card {
+    @apply rounded-2xl bg-card p-6;
+    box-shadow: var(--shadow-card);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gt-feature-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  /* Glass effect */
+  .gt-glass {
+    @apply bg-white/70 backdrop-blur-xl;
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .dark .gt-glass {
+    @apply bg-card/80 backdrop-blur-xl;
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Button variants */
+  .gt-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--gt-blue)) 0%, hsl(var(--gt-blue-light)) 100%);
+    color: white;
+    box-shadow: 0 4px 14px -2px hsl(var(--gt-blue) / 0.4);
+  }
+
+  .gt-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px -2px hsl(var(--gt-blue) / 0.5);
+  }
+
+   .dark .gt-btn-primary {
+    background: linear-gradient(135deg, hsl(var(--gt-cyan)) 0%, hsl(var(--gt-sky)) 100%);
+    box-shadow: 0 4px 14px -2px hsl(var(--gt-cyan) / 0.3);
+  }
+
+  .dark .gt-btn-primary:hover {
+    box-shadow: 0 6px 20px -2px hsl(var(--gt-cyan) / 0.4);
+  }
+
+  .gt-btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--gt-cyan)) 0%, hsl(var(--gt-sky)) 100%);
+    color: white;
+    box-shadow: 0 4px 14px -2px hsl(var(--gt-cyan) / 0.4);
+  }
+
+  .gt-btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px -2px hsl(var(--gt-cyan) / 0.5);
+  }
+
+  .gt-btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 px-6 py-3 font-semibold transition-all duration-300;
+    border-color: hsl(var(--border));
+    color: hsl(var(--foreground));
+  }
+
+  .gt-btn-outline:hover {
+    border-color: hsl(var(--gt-cyan));
+    color: hsl(var(--gt-cyan));
+    background: hsl(var(--gt-cyan) / 0.05);
+  }
+
+  /* Section spacing */
+  .gt-section {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  /* Text gradient */
+  .gt-text-gradient {
+    background: linear-gradient(135deg, hsl(var(--gt-blue)) 0%, hsl(var(--gt-cyan)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .dark .gt-text-gradient {
+    background: linear-gradient(135deg, hsl(var(--gt-cyan)) 0%, hsl(var(--gt-sky)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Dashboard mockup container */
+  .gt-dashboard-container {
+    @apply rounded-3xl overflow-hidden;
+    box-shadow: 0 25px 50px -12px hsl(var(--gt-blue) / 0.25);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .dark .gt-dashboard-container {
+    box-shadow: 0 25px 50px -12px hsl(222 47% 3% / 0.5), 0 0 40px -10px hsl(var(--gt-cyan) / 0.15);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Dark mode hero grid pattern */
+  .dark .gt-gradient-hero {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(222 47% 8%) 50%, hsl(222 47% 10%) 100%);
+  }
+
+  .dark .gt-gradient-bg {
+    background: linear-gradient(135deg, hsl(222 47% 7%) 0%, hsl(222 47% 9%) 100%);
+  }
+
+  .dark .gt-gradient-radial {
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(195 85% 50% / 0.1), transparent);
+  }
+
+  /* Hero grid pattern for dark mode */
+  .gt-hero-grid {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .dark .gt-hero-grid {
+    background-image: 
+      linear-gradient(hsl(217 40% 18% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(217 40% 18% / 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Dark mode feature card styling */
+  .dark .gt-feature-card {
+    border: 1px solid hsl(var(--border));
+  }
+
+  .dark .gt-feature-card:hover {
+    border-color: hsl(var(--gt-cyan) / 0.4);
+  }
+
+  /* Dark mode card styling */
+  .dark .gt-card {
+    border: 1px solid hsl(var(--border));
+  }
+
+  .dark .gt-card:hover {
+    border-color: hsl(var(--gt-cyan) / 0.3);
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .gt-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .gt-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+
+  .gt-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--gt-teal));
+    border-radius: 3px;
+  }
+}
