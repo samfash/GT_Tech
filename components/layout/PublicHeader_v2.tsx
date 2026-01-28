@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, Moon, Sun, X } from 'lucide-react';
@@ -87,14 +88,17 @@ const AUTH_LOGIN_URL = process.env.NEXT_PUBLIC_Backend_login_URL as string;
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="text-muted-foreground hover:text-gt-blue transition-colors font-medium"
               >
                 {link.name}
-              </a>
+              </Link>
+
             ))}
+            {isLoggedIn && <Link href="/dashboard" className="text-muted-foreground hover:text-gt-blue transition-colors">Dashboard</Link>} 
+
           </div>
 
           <div className="hidden md:flex items-center gap-4">
@@ -138,6 +142,7 @@ const AUTH_LOGIN_URL = process.env.NEXT_PUBLIC_Backend_login_URL as string;
               <Button onClick={toggleDarkMode}>
             {darkMode ? ( <><Sun size={18} /><span>Light</span></> ): (<><Moon size={18}/> <span>Dark</span></>)}
             </Button>
+            {isLoggedIn && <Link href="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors">Dashboard</Link>} 
             {!isLoggedIn ? (
            <Button variant="hero" size="sm" onClick={handleLogin}>Login</Button> 
              ) : (
