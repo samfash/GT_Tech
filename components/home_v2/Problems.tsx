@@ -31,7 +31,7 @@ const Problems = () => {
   const afterY = useTransform(scrollYProgress, [0, 1], [50, -100]);
 
   return (
-    <section id="solutions" className="gt-section relative overflow-hidden bg-gradient-to-b from-background to-secondary/30">
+    <section id="solutions" className="gt-section relative overflow-hidden bg-linear-to-b from-background via-secondary/40 to-background">
       <div className="container mx-auto px-6" ref={containerRef}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,7 +39,7 @@ const Problems = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-gt-teal font-semibold text-sm uppercase tracking-wider mb-4">
+          <span className="inline-block text-gt-cyan font-semibold text-sm uppercase tracking-wider mb-4">
             Transformation
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -96,10 +96,10 @@ const Problems = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="relative"
           >
-            <div className="gt-card p-8 lg:p-10 border-2 border-gt-teal/30 bg-gradient-to-br from-gt-teal/5 to-background">
-              <div className="inline-flex items-center gap-2 rounded-full bg-gt-teal/10 px-4 py-2 mb-6">
-                <Check className="w-4 h-4 text-gt-teal" />
-                <span className="font-semibold text-gt-teal">After GT Finance</span>
+            <div className="gt-card p-8 lg:p-10 border-2 border-gt-cyan/30 bg-linear-to-br from-gt-cyan/5 to-background">
+              <div className="inline-flex items-center gap-2 rounded-full bg-gt-cyan/10 px-4 py-2 mb-6">
+                <Check className="w-4 h-4 text-gt-cyan" />
+                <span className="font-semibold text-cyan">After GT Finance</span>
               </div>
 
               <h3 className="font-display text-2xl font-bold text-foreground mb-6">
@@ -113,10 +113,10 @@ const Problems = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                    className="flex items-start gap-4 p-4 rounded-xl bg-gt-teal/5"
+                    className="flex items-start gap-4 p-4 rounded-xl bg-gt-cyan/5"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-gt-teal/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-5 h-5 text-gt-teal" />
+                    <div className="w-10 h-10 rounded-lg bg-gt-cyan/10 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-5 h-5 text-gt-cyan" />
                     </div>
                     <p className="text-foreground pt-2 font-medium">{item.text}</p>
                   </motion.div>

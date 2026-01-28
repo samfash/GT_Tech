@@ -63,15 +63,15 @@ const FAQItem = ({
         onClick={onClick}
         className="w-full py-6 flex items-center justify-between text-left group"
       >
-        <h3 className="font-display font-semibold text-lg text-foreground pr-8 group-hover:text-gt-teal transition-colors">
+        <h3 className="font-display font-semibold text-lg text-foreground pr-8 group-hover:text-gt-cyan transition-colors">
           {faq.question}
         </h3>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="flex-shrink-0"
+          className="shrink-0"
         >
-          <ChevronDown className="w-5 h-5 text-muted-foreground group-hover:text-gt-teal transition-colors" />
+          <ChevronDown className="w-5 h-5 text-muted-foreground group-hover:text-gt-cyan transition-colors" />
         </motion.div>
       </button>
       <motion.div
@@ -107,7 +107,7 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-gt-teal font-semibold text-sm uppercase tracking-wider mb-4">
+          <span className="inline-block text-gt-cyan font-semibold text-sm uppercase tracking-wider mb-4">
             FAQ
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">

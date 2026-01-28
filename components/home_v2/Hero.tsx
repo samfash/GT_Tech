@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight} from 'lucide-react';
 import dashboardMockup from '@/public/dashboard-mockup.jpg';
 import Image from 'next/image';
 import { Button } from '../ui/button';
@@ -13,6 +13,12 @@ const Hero = () => {
     target: ref,
     offset: ["start start", "end start"]
   });
+
+  const AUTH_SIGNUP_URL = process.env.NEXT_PUBLIC_Backend_Signup_URL as string;
+
+  const handleSignIn = () => {
+  window.location.href = AUTH_SIGNUP_URL;
+};
 
   const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
@@ -38,7 +44,7 @@ const Hero = () => {
                 alt="GT Finance Dashboard"
                 className="w-full h-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none rounded-3xl" />
+              <div className="absolute inset-0 bg-linear-to-t from-background/20 to-transparent pointer-events-none rounded-3xl" />
             </div>
             
             {/* Floating badge */}
@@ -49,7 +55,7 @@ const Hero = () => {
               className="absolute -bottom-4 -right-4 lg:bottom-8 lg:right-0 gt-glass rounded-2xl p-4 shadow-gt-lg"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gt-cyan to-gt-sky flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-linear-to-br from-gt-cyan to-gt-sky flex items-center justify-center">
                   <span className="text-accent-foreground font-bold">99%</span>
                 </div>
                 <div>
@@ -91,7 +97,7 @@ const Hero = () => {
             <motion.div className="flex flex-col sm:flex-row gap-4 mb-12 relative z-20"
             style={{ opacity: 1 }}
             >
-              <Button variant="hero" size="xl">
+              <Button variant="hero" size="xl" onClick={handleSignIn}>
               Get Started Now
               <ArrowRight className="w-5 h-5" />
               </Button>
@@ -119,7 +125,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-5 bg-linear-to-t from-background to-transparent pointer-events-none" />
     </section>
   );
 };

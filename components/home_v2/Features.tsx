@@ -97,7 +97,7 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-gt-teal font-semibold text-sm uppercase tracking-wider mb-4">
+          <span className="inline-block text-gt-cyan font-semibold text-sm uppercase tracking-wider mb-4">
             Features
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -125,14 +125,14 @@ const Features = () => {
               {/* Glowing icon container */}
               <div className="relative mb-6">
                 <motion.div
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center ${feature.glow} transition-all duration-500 group-hover:scale-110`}
+                  className={`w-16 h-16 rounded-2xl bg-linear-to-br ${feature.gradient} flex items-center justify-center ${feature.glow} transition-all duration-500 group-hover:scale-110`}
                   whileHover={{ rotate: [0, -5, 5, 0] }}
                   transition={{ duration: 0.4 }}
                 >
                   <feature.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                 </motion.div>
                 {/* Glow effect behind icon */}
-                <div className={`absolute inset-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} opacity-40 blur-xl group-hover:opacity-60 transition-opacity duration-500`} />
+                <div className={`absolute inset-0 w-16 h-16 rounded-2xl bg-linear-to-br ${feature.gradient} opacity-40 blur-xl group-hover:opacity-60 transition-opacity duration-500`} />
               </div>
               
               <h3 className="font-display font-semibold text-xl text-foreground mb-3 group-hover:text-gt-cyan transition-colors duration-300">

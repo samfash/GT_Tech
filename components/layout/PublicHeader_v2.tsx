@@ -42,7 +42,7 @@ const toggleDarkMode = () => {
   }
 };
 
-const AUTH_LOGIN_URL = process.env.NEXT_PUBLIC_Backend_URL as string;
+const AUTH_LOGIN_URL = process.env.NEXT_PUBLIC_Backend_login_URL as string;
 
   const handleLogin = () => {
   window.location.href = AUTH_LOGIN_URL;
@@ -124,7 +124,7 @@ const AUTH_LOGIN_URL = process.env.NEXT_PUBLIC_Backend_URL as string;
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden mt-4 pb-4 border-t border-border"
           >
-            <div className="flex flex-col gap-4 pt-4 bg-background">
+            <div className="flex flex-col gap-4 pt-4 bg-background/95 p-4 rounded-lg ">
               {navLinks.map((link) => (
                 <a
                   key={link.name}

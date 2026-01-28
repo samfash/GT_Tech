@@ -81,7 +81,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="gt-section relative overflow-hidden bg-gradient-to-b from-secondary/30 to-background"
+      className="gt-section relative overflow-hidden bg-linear-to-b from-background via-secondary/30 to-background"
     >
       <div className="container mx-auto px-6" ref={ref}>
         <motion.div
@@ -90,7 +90,7 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-gt-teal font-semibold text-sm uppercase tracking-wider mb-4">
+          <span className="inline-block text-gt-cyan font-semibold text-sm uppercase tracking-wider mb-4">
             Testimonials
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -102,7 +102,7 @@ const Testimonials = () => {
         </motion.div>
 
         <div className="max-w-4xl mx-auto relative">
-          <div className="gt-card p-8 md:p-12 relative overflow-hidden min-h-[320px]">
+          <div className="gt-card p-8 md:p-12 relative overflow-hidden min-h-80">
             <Quote className="absolute top-8 left-8 w-16 h-16 text-gt-blue/10" />
             
             <AnimatePresence mode="wait" custom={direction}>
@@ -121,7 +121,7 @@ const Testimonials = () => {
                 </blockquote>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-gt-navy to-gt-teal flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-linear-to-br from-gt-navy to-gt-cyan flex items-center justify-center">
                     <span className="text-white font-semibold">
                       {testimonials[currentIndex].avatar}
                     </span>
@@ -143,7 +143,7 @@ const Testimonials = () => {
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={handlePrev}
-              className="w-12 h-12 rounded-full border border-border hover:border-gt-teal hover:bg-gt-teal/5 flex items-center justify-center transition-all"
+              className="w-12 h-12 rounded-full border border-border hover:border-gt-cyan hover:bg-gt-cyan/5 flex items-center justify-center transition-all"
             >
               <ChevronLeft className="w-5 h-5 text-muted-foreground" />
             </button>
@@ -158,7 +158,7 @@ const Testimonials = () => {
                   }}
                   className={`w-2 h-2 rounded-full transition-all ${
                     index === currentIndex
-                      ? 'w-8 bg-gt-teal'
+                      ? 'w-8 bg-gt-cyan'
                       : 'bg-border hover:bg-muted-foreground'
                   }`}
                 />
@@ -167,7 +167,7 @@ const Testimonials = () => {
 
             <button
               onClick={handleNext}
-              className="w-12 h-12 rounded-full border border-border hover:border-gt-teal hover:bg-gt-teal/5 flex items-center justify-center transition-all"
+              className="w-12 h-12 rounded-full border border-border hover:border-gt-cyan hover:bg-gt-cyan/5 flex items-center justify-center transition-all"
             >
               <ChevronRight className="w-5 h-5 text-muted-foreground" />
             </button>

@@ -6,64 +6,61 @@
 
 @layer base {
   :root {
-    /* Core brand colors */
-    --background: 210 33% 99%;
-    --foreground: 217 71% 20%;
+       /* Core brand colors - Soft sky blue palette matching #B5D9F3 */
+    --background: 205 58% 92%;
+    --foreground: 217 71% 18%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 217 71% 20%;
+    --card: 205 50% 97%;
+    --card-foreground: 217 71% 18%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 217 71% 20%;
+    --popover: 205 50% 97%;
+    --popover-foreground: 217 71% 18%;
 
     /* Royal blue for trust and professionalism */
-    --primary: 217 71% 35%;
+    --primary: 217 71% 30%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light slate for secondary elements */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 217 71% 20%;
+    /* Soft blue-gray for secondary elements */
+    --secondary: 205 45% 88%;
+    --secondary-foreground: 217 71% 18%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 205 40% 85%;
+    --muted-foreground: 217 35% 35%;
 
     /* Cyan accent for vibrancy */
-    --accent: 195 85% 50%;
+    --accent: 195 85% 45%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 195 85% 50%;
+    --border: 210 40% 82%;
+    --input: 210 40% 85%;
+    --ring: 195 85% 45%;
 
     --radius: 0.75rem;
 
-    /* Custom GT Finance tokens - Updated to match logo */
-    --gt-blue: 217 71% 35%;
-    --gt-blue-light: 217 65% 45%;
-    --gt-cyan: 195 85% 50%;
-    --gt-cyan-light: 195 75% 60%;
-    --gt-sky: 197 85% 55%;
-    --gt-navy: 217 71% 25%;
-    --gt-slate: 215 25% 27%;
-    --gt-gray: 215 20% 65%;
-    --gt-light: 210 33% 98%;
-    --gt-gradient-start: 210 100% 97%;
-    --gt-gradient-end: 195 40% 95%;
-    --gt-success: 142 69% 45%;
-    --gt-light: 210 33% 98%;
-    --gt-gradient-start: 210 100% 97%;
-    --gt-gradient-end: 173 30% 95%;
+    /* Custom GT Finance tokens - Updated to match poster */
+    --gt-blue: 217 71% 28%;
+    --gt-blue-light: 217 65% 40%;
+    --gt-cyan: 195 85% 45%;
+    --gt-cyan-light: 195 75% 55%;
+    --gt-sky: 205 70% 60%;
+    --gt-navy: 217 71% 20%;
+    --gt-slate: 217 50% 25%;
+    --gt-gray: 215 25% 55%;
+    --gt-light: 205 55% 95%;
+    --gt-gradient-start: 205 60% 95%;
+    --gt-gradient-end: 205 50% 88%;
+    --gt-success: 142 69% 40%;
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(222 47% 11% / 0.08), 0 2px 4px -2px hsl(222 47% 11% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(222 47% 11% / 0.08), 0 4px 6px -4px hsl(222 47% 11% / 0.06);
-    --shadow-xl: 0 20px 25px -5px hsl(222 47% 11% / 0.08), 0 8px 10px -6px hsl(222 47% 11% / 0.06);
-    --shadow-card: 0 0 0 1px hsl(214 32% 91%), 0 4px 20px -2px hsl(222 47% 11% / 0.08);
-    --shadow-card-hover: 0 0 0 1px hsl(173 58% 39% / 0.3), 0 8px 30px -4px hsl(222 47% 11% / 0.12);
+    /* Shadows - adjusted for light blue background */
+    --shadow-sm: 0 1px 2px 0 hsl(217 50% 20% / 0.06);
+    --shadow-md: 0 4px 6px -1px hsl(217 50% 20% / 0.10), 0 2px 4px -2px hsl(217 50% 20% / 0.08);
+    --shadow-lg: 0 10px 15px -3px hsl(217 50% 20% / 0.10), 0 4px 6px -4px hsl(217 50% 20% / 0.08);
+    --shadow-xl: 0 20px 25px -5px hsl(217 50% 20% / 0.10), 0 8px 10px -6px hsl(217 50% 20% / 0.08);
+    --shadow-card: 0 0 0 1px hsl(210 40% 75% / 0.5), 0 4px 20px -2px hsl(217 50% 20% / 0.10);
+    --shadow-card-hover: 0 0 0 1px hsl(195 85% 45% / 0.4), 0 8px 30px -4px hsl(217 50% 20% / 0.15);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -164,15 +161,15 @@
 @layer components {
   /* Gradient backgrounds */
   .gt-gradient-bg {
-    background: linear-gradient(135deg, hsl(var(--gt-gradient-start)) 0%, hsl(var(--gt-gradient-end)) 100%);
+    background: linear-gradient(135deg, hsl(205 60% 94%) 0%, hsl(205 50% 90%) 100%);
   }
 
   .gt-gradient-hero {
-    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(210 40% 97%) 50%, hsl(195 30% 96%) 100%);
+    background: linear-gradient(180deg, hsl(205 58% 92%) 0%, hsl(205 55% 90%) 50%, hsl(205 50% 88%) 100%);
   }
 
   .gt-gradient-radial {
-    background: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(195 85% 50% / 0.15), transparent);
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(217 71% 28% / 0.08), transparent);
   }
 
   /* Card styles */
@@ -201,8 +198,8 @@
 
   /* Glass effect */
   .gt-glass {
-    @apply bg-white/70 backdrop-blur-xl;
-    border: 1px solid hsl(var(--border) / 0.5);
+    @apply bg-white/80 backdrop-blur-xl;
+    border: 1px solid hsl(210 50% 85% / 0.7);
   }
 
   .dark .gt-glass {

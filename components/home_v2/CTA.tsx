@@ -10,9 +10,16 @@ const CTA = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isHovered, setIsHovered] = useState(false);
 
+  
+  const AUTH_SIGNUP_URL = process.env.NEXT_PUBLIC_Backend_Signup_URL as string;
+
+  const handleSignIn = () => {
+  window.location.href = AUTH_SIGNUP_URL;
+  };
+
   return (
     <section id="cta" className="gt-section relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-gt-navy via-gt-navy-light to-gt-slate" />
+      <div className="absolute inset-0 bg-linear-to-br from-gt-navy via-gt-navy-light to-gt-slate" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -26,7 +33,7 @@ const CTA = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute -top-1/2 -left-1/4 w-full h-full rounded-full bg-gt-teal/20 blur-3xl"
+          className="absolute -top-1/2 -left-1/4 w-full h-full rounded-full bg-gt-cyan/20 blur-3xl"
         />
         <motion.div
           animate={{
@@ -38,7 +45,7 @@ const CTA = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute -bottom-1/2 -right-1/4 w-full h-full rounded-full bg-gt-teal/20 blur-3xl"
+          className="absolute -bottom-1/2 -right-1/4 w-full h-full rounded-full bg-gt-cyan/20 blur-3xl"
         />
       </div>
 
@@ -55,13 +62,13 @@ const CTA = () => {
             transition={{ delay: 0.2 }}
             className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-5 py-2 mb-8"
           >
-            <Sparkles className="w-4 h-4 text-gt-teal-light" />
+            <Sparkles className="w-4 h-4 text-gt-cyan-light" />
             <span className="text-sm font-medium text-white/90">Start Your Free Trial Today</span>
           </motion.div>
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Ready to Transform Your{' '}
-            <span className="text-gt-teal-light">Financial Operations?</span>
+            <span className="text-gt-cyan-light">Financial Operations?</span>
           </h2>
 
           <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto">
@@ -81,12 +88,12 @@ const CTA = () => {
               className="group relative inline-flex items-center justify-center gap-2 rounded-xl px-1 py-1 font-semibold text-gt-navy bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-white/20"
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-gt-teal-light to-gt-teal"
+                className="absolute inset-0 bg-linear-to-r from-gt-cyan-light to-gt-sky transition-transform duration-300"
                 initial={{ x: "-100%" }}
                 animate={{ x: isHovered ? "0%" : "-100%" }}
                 transition={{ duration: 0.3 }}
               />
-              <Button  size="xl">
+              <Button  size="xl" variant="ghost" onClick={handleSignIn} className="relative z-10 text-gt-navy"  >
               Try our services
               <ArrowRight className="w-5 h-5" />
               </Button>
