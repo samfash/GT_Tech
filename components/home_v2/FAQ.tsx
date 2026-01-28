@@ -4,6 +4,62 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is GT Finance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "GT Finance is a financial management platform that helps organizations generate financial reports, manage ledgers, monitor tax obligations, and support audit and compliance processes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What financial reports can GT Finance generate?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "GT Finance generates income statements, cash flow statements, statements of financial position, cash books, sales and purchase ledgers, and receipts and payments reports.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does GT Finance support tax management?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. GT Finance supports basic tax management including VAT and Company Income Tax (CIT), helping organizations track tax positions and reduce compliance risks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can GT Finance be used by small and medium-sized businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. GT Finance is designed for startups, small businesses, and growing organizations that need structured financial reporting without hiring external consultants.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does GT Finance provide audit and compliance features?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "GT Finance includes audit monitoring features that support internal controls and allow organizations to communicate directly with external auditors.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How secure is GT Finance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "GT Finance applies role-based access control, audit trails, and secure data handling practices to protect sensitive financial information.",
+      },
+    },
+  ],
+};
+
 const faqs = [
   {
     question: 'How does GT Finance ensure tax compliance?',
@@ -97,6 +153,15 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
+    <>
+      {/* FAQ Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd),
+        }}
+      />
+
     <section id="faq" className="gt-section relative overflow-hidden">
       <div className="absolute inset-0 gt-gradient-bg pointer-events-none" />
       
@@ -131,6 +196,7 @@ const FAQ = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

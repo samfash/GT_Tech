@@ -7,6 +7,7 @@ import teamEmily from "@/public/team-emily.png";
 import teamDavid from "@/public/team-david.png";
 import Image from "next/image";
 
+
 const values = [
   {
     icon: Shield,

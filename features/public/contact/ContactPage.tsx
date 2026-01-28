@@ -33,6 +33,7 @@ const ContactPage = () => {
   ];
 
   return (
+    
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative overflow-hidden">

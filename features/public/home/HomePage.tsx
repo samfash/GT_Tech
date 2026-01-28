@@ -5,6 +5,7 @@ import CTA from "@/components/home_v2/CTA";
 import Testimonials from "@/components/home_v2/Testimonials";
 import FAQ from "@/components/home_v2/FAQ";
 
+
 const HomePage = () => {
   return (
     <>

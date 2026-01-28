@@ -7,6 +7,7 @@ const ErrorPage = () => {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-background flex items-center justify-center relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -61,6 +62,7 @@ const ErrorPage = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 

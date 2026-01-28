@@ -1,6 +1,6 @@
 "use client";
 
-import "@/styles/globals.css";
+import "@/styles/globals_v2.css";
 
 import { ReactNode, useEffect } from "react";
 import { useRouter } from "next/navigation";
